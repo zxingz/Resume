@@ -1,51 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Version 1.0
-%
-% Original author:
-% Vishnu Srivastava (vishnu-srivastava{@}hotmail{.}com)
-%
-% Original repository:
-% https://github.com/zxingz/Resume
-%
-% TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CHANGELOG:
-% v1.0:
-% TBD
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the
-% vertical limit
-% 2. Hacky space on the first bullet point on the second column.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[]{Vishnu-Resume}
 
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     LAST UPDATED DATE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lastupdated
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \namesection{Vishnu}{Srivastava}{ \urlstyle{same}\url{} \\
 \href{mailto:vishnu-srivastava@hotmail.com}{vishnu-srivastava@hotmail.com} | 226.600.2928
@@ -72,10 +30,10 @@ Guide: \href{https://cs.uwaterloo.ca/about/people/palencar}{Prof. Paulo Alencar}
 \location{Waterloo, ON | CGPA : 87\% \\ Sep'14 - May'17}
 \sectionsep
 
-\subsection{Delhi Technological \\University}
-(Delhi College of Engineering)\\
+\subsection{Delhi Technological}
+\subsection{University}
 \descript{B.Tech Engineering Physics}
-Conc. in Robotics \& Information Systems \\
+Conc. in Robotics \& Info Systems \\
 \location{New Delhi, India \\ May'09 - Sep'14}
 \sectionsep
 
@@ -88,18 +46,6 @@ Github:// \href{https://github.com/zxingz}{\custombold{github.com/zxingz}} \\
 LinkedIn://  \href{https://www.linkedin.com/in/zxingz/}{\custombold{linkedin.com/in/zxingz}} \\
 \sectionsep
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Coursework}
-\subsection{Graduate}
-Applied Machine Learning\\
-Multi-Agent Systems\\
-Database Management & Use\\
-Big Data Software Engineering\\
-Software Requirements & Specs\\
-\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
@@ -108,25 +54,36 @@ Software Requirements & Specs\\
 \section{Skills}
 \subsection{Programming}
 \location{Over 10000 lines:}
-Python \textbullet{} Java \textbullet{} C++/C\\
-\location{Familiar:}
-Shell \textbullet{} JavaScript \textbullet{} MATLAB \textbullet{} R\\ \textbullet{} node.js \textbullet{} Android \textbullet{} C\#
+Python \textbullet{} Java \textbullet{} C++/C  \textbullet{} JavaScript \textbullet{} Bash
 \sectionsep
 
-\subsection{Database}
-\location{Actively Used:}
-SQLite \textbullet{} MySQL \textbullet{} MS SQLServer \textbullet{} Oracle 12\\
-\location{Familiar:}
-MongoDB \textbullet{} PostgreSQL
+\subsection{Python}
+Apache Airflow \textbullet{} Pandas \textbullet{} PySpark  \textbullet{} Django \textbullet{} PyTorch  \textbullet{} Spacy   \textbullet{} SQLAlchemy  \textbullet{} scikit-learn
 \sectionsep
 
-\subsection{Development Tools}
-Apache Airflow \textbullet{} Jenkins \textbullet{} Docker \\ \textbullet{} Git \textbullet{} SVN
+\subsection{JavaScript}
+Bootstrap4 \textbullet{} jQuery 
+\sectionsep
+
+\subsection{Data Visualization}
+Tableau \textbullet{} Grafana \textbullet{} D3.js  \textbullet{} Plotly \textbullet{} Kibana
+\sectionsep
+
+\subsection{DB/Cache/QL}
+ Postgresql  \textbullet{} Redis  \textbullet{} Hive  \textbullet{} MySQL  \textbullet{} Oracle
+\sectionsep
+
+\subsection{Dev/CI/CD}
+Jenkins \textbullet{} Docker \textbullet{} Git \textbullet{} SVN
+\sectionsep
+
+
+\subsection{Monitoring}
+ElasticSearch \textbullet{} Filebeat \textbullet{} CAdvisor \textbullet{} NodeExporter
 \sectionsep
 
 \subsection{Environments}
-Solaris \textbullet{} LinuxMint \textbullet{} Ubuntu \textbullet{} Windows\\ 
-\textbullet{} Hadoop HDFS
+RHEL \textbullet{} Windows  \textbullet{} Hadoop HDFS \textbullet{} Apache Mesos-DC/OS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN TWO
@@ -144,9 +101,19 @@ Solaris \textbullet{} LinuxMint \textbullet{} Ubuntu \textbullet{} Windows\\
 \section{Experience}
 
 \runsubsection{Scotiabank}
-\descript{| Programmer Analyst (Centralized Risk Platform)}
-\location{July 2017 – Present | Toronto, ON}
+\descript{| Data Scientist (Decision Sciences)}
+\location{July 2018 – Present | Toronto, ON}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developed Web UI to search and visualize SEDAR docs and SEDI insider trading data.
+\item Created Airflow jobs to clean and extract text from SEDAR News docs and Management Info Circular(MIC) using PySpark and Enterprise Data Lake. 
+\item Developing reading comprehension QA for SEDAR News docs and MIC using a combination of LSTMs and Self-Attention Mechanism.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Scotiabank}
+\descript{| Programmer Analyst (Centralized Risk Platform)}
+\location{July 2017 – July 2018 | Toronto, ON}
 \begin{tightemize}\item Deployed Apache Airflow for RMIT Risk Warehouse on Production environment with 80+ DAGs.
 \item Deployed Elasticsearch and Filebeat for log analysis.
 \item Working towards deploying monitoring stack (Prometheus, Grafana, CAdvisor, NodeExporter) using Docker.
@@ -156,7 +123,7 @@ Solaris \textbullet{} LinuxMint \textbullet{} Ubuntu \textbullet{} Windows\\
 \runsubsection{ERNST \& YOUNG L.L.P}
 \descript{| Associate Consultant IT}
 \location{June 2013 – July 2014 | New Delhi, India}
-\begin{tightemize}\item Develop & Design UI and Logic using SAP Advanced Business Application
+\begin{tightemize}\item Develop \& Design UI and Logic using SAP Advanced Business Application
 Programming.Customize and Develop Data Report and Form Generation.
 \end{tightemize}
 \sectionsep
@@ -179,7 +146,7 @@ Google Compute Engine using Scikit-Learn and NetworkX python libraries.
 \runsubsection{University of Waterloo}
 \descript{| Teaching Assistant}
 \location{September 2014 – December 2016 | Waterloo, ON}
-\begin{tightemize}\item CS 246-Object-Oriented Software Development(C++ & UML)
+\begin{tightemize}\item CS 246-Object-Oriented Software Development(C++ \& UML)
 \item CS 116-Introduction to Computer Science 2(Python)
 \end{tightemize}
 \sectionsep
@@ -195,25 +162,10 @@ Google Compute Engine using Scikit-Learn and NetworkX python libraries.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Projects}
-\descript{Score Prediction of NBA Players for DraftKings & Fanduel}
-\descript{}
-\location{}
-Predicted score for a player using Random Forest algorithm. Optimized line-ups using the predicted
-scores for daily fantasy sports websites.
-\sectionsep
-
-\descript{Review of Game Theoretic Strategies and Machine Learning Algorithm for an
-Online Multiplayer Reversi Game Playing Agent}
-\descript{| UW CS886 Multi-Agent Systems}
-\location{}
-Primarily focused on the mini-max technique and on the use of a machine learning agent trained
-using a database of the championship games.
-\sectionsep
 
 \descript{High Frequency Trading by Transient Profit Peak Classification
 Using Machine Learning on Real-Time Data Streams}
 \descript{| UW CS886 Applied Machine Learning}
-\location{}
 Developed a transient profit peak classification algorithm combined with a classifier expansion
 mechanism to take advantage of the volatility in the stock markets by classifying a data point as a
 buying point (BP), selling point (SP) or as a do-nothing point (DN).
